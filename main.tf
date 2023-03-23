@@ -66,3 +66,7 @@ resource "aws_security_group" "allow_ssh" {
     }
   }
 }
+
+output "ec2_global_ips" {
+  value = ["${aws_instance.My-EC2-Instance.*.public_ip}"]
+}
