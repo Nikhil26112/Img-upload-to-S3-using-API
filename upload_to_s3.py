@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 s3_client = boto3.client('s3', region_name='ap-south-1')
 
-BUCKET_NAME = 'nikhil--chauhan'
+BUCKET_NAME = 'nikhil-chauhan'
 
 # Check if the bucket already exists
 response = s3_client.list_buckets()
