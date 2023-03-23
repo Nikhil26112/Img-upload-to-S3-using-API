@@ -1,0 +1,12 @@
+[Unit]
+Description=My Flask App
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Img-upload-to-S3-using-API
+ExecStart=/usr/bin/python3 /home/ubuntu/Img-upload-to-S3-using-API/upload_to_s3.py
+Restart=always 
+Environment="FLASK_ENV=production" "SECRET_KEY=my_secret_key"
+
+[Install]
+WantedBy=multi-user.target
